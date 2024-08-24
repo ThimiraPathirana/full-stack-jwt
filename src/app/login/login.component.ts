@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,6 +10,16 @@ export class LoginComponent {
 
   username: string = '';
   password: string = '';
+  invalid: boolean = false;
 
-  clickLogin () {}
+  constructor(private router: Router) {}
+
+  clickLogin () {
+    if (this.username === 'thimira' && this.password === '123' ) {
+      this.router.navigate(['welcome']);
+      this.invalid = false;
+    } else {
+      this.invalid = true;
+    }
+  }
 }
