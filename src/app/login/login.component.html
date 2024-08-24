@@ -6,12 +6,12 @@
             <label for="first">
                 Username:
             </label>
-            <input type="text" id="username" name="username" placeholder="Enter your Username" required>
+            <input type="text" id="username" name="username" [(ngModel)]="username" placeholder="Enter your Username" required>
 
             <label for="password">
                 Password:
             </label>
-            <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+            <input type="password" id="password" name="password" [(ngModel)]="password" placeholder="Enter your Password" required>
 
             <div class="wrap">
                 <button type="submit" onclick="clickLogin()">
