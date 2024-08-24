@@ -16,7 +16,7 @@ export class LoginComponent {
 
   clickLogin () {
     if (this.username === 'thimira' && this.password === '123' ) {
-      this.router.navigate(['welcome']);
+      this.router.navigate(['welcome', this.username]);
       this.invalid = false;
     } else {
       this.invalid = true;
