@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { ErrorComponent } from './error/error.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { EventComponent } from './event/event.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
   { path: 'login', component: LoginComponent},
   { path: 'welcome/:name', component: WelcomeComponent},
+  { path: 'event', component: EventComponent},
   { path: '**', component: ErrorComponent}
 ];
 
