@@ -23,21 +23,21 @@
         </ul>
         <ul class="navbar-nav navbar-collapse justify-content-end">
             <li class="nav-item">
-                <a class="nav-link" href="#">Find Event</a>
+                <a class="nav-link" *ngIf="isUserLogin" routerLink="/event">Find Event</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Create Event</a>
+                <a class="nav-link" *ngIf="isUserLogin" aria-current="page" href="#">Create Event</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Help Center</a>
+                <a class="nav-link" *ngIf="isUserLogin" href="#">Help Center</a>
             </li>
         </ul>
         <ul class="navbar-nav navbar-collapse justify-content-end">
             <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">login</a>
+                <a class="nav-link" *ngIf="!isUserLogin" routerLink="/login" tabindex="-1" aria-disabled="true">Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">logout</a>
+                <a class="nav-link" *ngIf="isUserLogin" routerLink="/logout" tabindex="-1" aria-disabled="true">Logout</a>
             </li>
         </ul>
     </div>

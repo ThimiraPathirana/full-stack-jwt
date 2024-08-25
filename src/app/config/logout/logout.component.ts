@@ -1,20 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HardcodeAuthenticateServiceService } from 'src/app/service/config/hardcode-authenticate-service.service';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+  selector: 'app-logout',
+  templateUrl: './logout.component.html',
+  styleUrls: ['./logout.component.css'],
 })
-export class HeaderComponent implements OnInit {
-
-  isUserLogin: boolean = false;
-
+export class LogoutComponent implements OnInit {
   constructor(
     private hardcodeAuthenticateServiceService: HardcodeAuthenticateServiceService
   ) {}
 
   ngOnInit(): void {
-    this.isUserLogin = this.hardcodeAuthenticateServiceService.isUserLogin();
+    // this.hardcodeAuthenticateServiceService.logout();
   }
 }
