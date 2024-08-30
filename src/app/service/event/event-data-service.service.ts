@@ -1,13 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HelloEventBean } from 'src/app/model/eventData.model';
 
 @Injectable({
   providedIn: 'root'
 })
-
-export class HelloWorldBean {
-  constructor(public message: string){}
-}
 
 export class EventDataServiceService {
 
@@ -16,6 +13,6 @@ export class EventDataServiceService {
   constructor(private http: HttpClient) { }
 
   executeHelloWorldBeanService() {
-    return this.http.get<HelloWorldBean>(this.baseUrl + 'hello-world-bean');
+    return this.http.get<HelloEventBean>(this.baseUrl + 'hello-world-bean');
   }
 }

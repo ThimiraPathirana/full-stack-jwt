@@ -5,3 +5,7 @@ export interface EventData {
     venue: string,
     date: Date
 }
+
+export interface HelloEventBean {
+    message: string;
+}

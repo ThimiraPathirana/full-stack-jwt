@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {
-  EventDataServiceService,
-  HelloWorldBean,
-} from '../service/event/event-data-service.service';
+import { EventDataServiceService } from '../service/event/event-data-service.service';
 import { error } from 'cypress/types/jquery';
+import { HelloEventBean } from '../model/eventData.model';
 
 @Component({
   selector: 'app-welcome',
@@ -31,7 +29,7 @@ export class WelcomeComponent implements OnInit {
     );
   }
 
-  successBeanMessage(response: HelloWorldBean) {
+  successBeanMessage(response: HelloEventBean) {
     this.message = response.message;
   }
 
